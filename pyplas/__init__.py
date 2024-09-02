@@ -1,3 +1,3 @@
 #!/usr/bin/python
-from .species.species import species, electrons, ions, neutrals
-from .plasma.plasma import plasma
+from .species import species, electrons, ions, neutrals
+from .plasma import plasma

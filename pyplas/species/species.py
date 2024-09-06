@@ -57,16 +57,12 @@ class species():
 
 class electrons(species):
     def __init__(self, n=None, T=None):
-        super().__init__()
-        self.n = n
-        self.m = const.m_e
-        self.q = -const.e
-        self.T = T
+        super().__init__(m=const.m_e, n=n, T=T, q=-const.e)
 
 
 class ions(species):
     def __init__(self, element, n=None, T=300, P=None, q=const.e):
-        super().__init__()
+        super().__init__(n=n, T=T, P=P, q=q)
 
         if not q:
             self._q = const.e
@@ -87,8 +83,7 @@ class ions(species):
 
 class neutrals(species):
     def __init__(self, element, n=None, T=300, P=None):
-        super().__init__()
-        self.q = 0
+        super().__init__(n=n, T=T, P=P, q=0)
         self.element_info(element)
         self.ideal_gas(n, T, P)
         

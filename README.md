@@ -3,6 +3,7 @@
 The library contains a few very basic classes to store information about a low-temperature plasma and allows for the calculation of common plasma parameters.
 It's mainly meant to support other libraries that do actually useful things with this basic framework, like  [**owlspec**](https://github.com/mimurrayy/owl).
 
+Install from [pypi](https://pypi.org/project/pyplas/): `pip install pyplas`
 
 ## Example
 
